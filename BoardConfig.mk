@@ -58,6 +58,8 @@ TARGET_KERNEL_CONFIG := montana_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 6.0.2
+TARGET_CUSTOM_DTBTOOL := dtbTool_custom
+BOARD_DTBTOOL_ARGS += --force-v3 --motorola 1
 endif
 
 # Partitions
