@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/addison
+DEVICE_PATH := device/motorola/montana
 
 # Architecture
 TARGET_ARCH := arm64
@@ -30,14 +30,14 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8953
+TARGET_BOOTLOADER_BOARD_NAME := MSM8937
 TARGET_NO_BOOTLOADER := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8953
+TARGET_BOARD_PLATFORM := msm8937
 
 # Kernel
 BOARD_CUSTOM_BUILD_MAKEFILE := $(DEVICE_PATH)/dt_image.mk
@@ -53,7 +53,7 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dt.img
 
 ifeq ($(strip $(TARGET_PREBUILT_KERNEL)),)
-TARGET_KERNEL_CONFIG := addison_defconfig
+TARGET_KERNEL_CONFIG := montana_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 endif
 
