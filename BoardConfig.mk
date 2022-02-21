@@ -56,6 +56,8 @@ TARGET_PREBUILT_DTB := $(DEVICE_PATH)/dt.img
 ifeq ($(strip $(TARGET_PREBUILT_KERNEL)),)
 TARGET_KERNEL_CONFIG := montana_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := 6.0.2
 endif
 
 # Partitions
