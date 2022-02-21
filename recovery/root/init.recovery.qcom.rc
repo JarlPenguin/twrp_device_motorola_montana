@@ -15,5 +15,8 @@ service sbinqseecomd /sbin/qseecomd
     group root
     seclabel u:r:recovery:s0
 
+on boot
+    setprop sys.usb.config adb
+
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
