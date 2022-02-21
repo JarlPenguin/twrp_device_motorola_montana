@@ -14,10 +14,8 @@
 # limitations under the License.
 #
 
-ifneq ($(filter montana, $(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(TARGET_DEVICE),montana)
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
 endif
