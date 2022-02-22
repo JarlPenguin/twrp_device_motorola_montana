@@ -20,6 +20,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Crypto
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gatekeeper=msm8937 \
+    ro.hardware.keystore=msm8937
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := montana
 PRODUCT_NAME := omni_montana
