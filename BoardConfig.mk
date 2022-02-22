@@ -64,6 +64,10 @@ TARGET_CUSTOM_DTBTOOL := dtbTool_custom
 BOARD_DTBTOOL_ARGS += --force-v3 --motorola 1
 endif
 
+# Logging
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
