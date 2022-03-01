@@ -9,6 +9,7 @@ on fs
 on init
     install_keyring
     start hwservicemanager
+    start qti.vibrator-1-2
     setprop crypto.ready 1
 
 # separate copy needed to use /sbin/linker instead of /system/bin/linker
@@ -52,6 +53,12 @@ service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
     seclabel u:r:recovery:s0
 
 service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service qti.vibrator-1-2 /sbin/vendor.qti.hardware.vibrator@1.2-service
     user root
     group root
     disabled
